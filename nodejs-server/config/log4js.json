@@ -1,0 +1,20 @@
+{
+    "appenders": {                              
+        "dateFile": {                           
+            "type": "dateFile",                 
+            "filename": "logs/access.log"            
+        },
+        "console": {
+            "type": "console"
+        },
+        "app": {
+            "type": "dateFile",                 
+            "filename": "logs/app.log"  
+        }
+
+    },
+    "categories": {                             
+        "default": { "appenders": ["dateFile", "console"], "level": "ALL" },
+            "app": { "appenders": ["dateFile", "app"], "level": "ALL" }
+    }
+}
